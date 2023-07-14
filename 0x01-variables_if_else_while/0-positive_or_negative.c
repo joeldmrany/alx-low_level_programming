@@ -7,7 +7,6 @@ int main(void)
 {
 	int n;
 
-	n = 10;
 	if (n < 0)
 	{
 		printf("%d is negative\n", n);
