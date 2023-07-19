@@ -1,15 +1,16 @@
 #include "main.h"
 /**
  * _islower - Ok
+ * @c: is lower in ascii code
  * Return: 1 0
  */
 int _islower(int c)
 {
-	if (c >= 'a' || c <= 'z')
+	if (c >= 97 || c <= 122)
 	{
 		return (1);
 	}
-	else 
+	else
 	{
 		return (0);
 	}
