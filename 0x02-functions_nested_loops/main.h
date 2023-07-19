@@ -1,2 +1,1 @@
-char 'c';
-c = "_putchar";
+int _putchar(char c)
