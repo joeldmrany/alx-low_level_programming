@@ -1,8 +1,11 @@
 #include "main.h"
-/** print_last_digit - it print last digit
- * @a: it is the int
- * Return: 0
+
+/**
+ * print_last_digit - it print last digit
+ * @a: anything
+ * Return: digit
  */
+
 int print_last_digit(int a)
 {
 	int c;
@@ -16,6 +19,6 @@ int print_last_digit(int a)
 	else
 	{
 		_putchar(c + 48);
-		return(c);
+		return (c);
 	}
 }
