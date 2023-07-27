@@ -12,9 +12,9 @@ void print_rev(char *s)
 	{
 		a++;
 	}
-	b = a;
+	b = a - 1;
 	c = b;
-	while (c > 0)
+	while (c >= 0)
 	{
 		_putchar(s[c]);
 		c--;
