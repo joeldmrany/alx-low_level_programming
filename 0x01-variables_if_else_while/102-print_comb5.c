@@ -14,7 +14,7 @@ int main(void)
 		{
 			for (c = a; c <= '9'; c++)
 			{
-				for (d = (b + 1); d <= '9'; d++)
+				for (d = b; d <= '9'; d++)
 				{
 					putchar(a);
 					putchar(b);
@@ -24,8 +24,10 @@ int main(void)
 
 					if (!((a == '9' && b == '8')&&(c == '9' && d == '9')))
 					{
+
 						putchar(',');
 						putchar(' ');
+						break;
 					}
 				}
 				d = '0';
