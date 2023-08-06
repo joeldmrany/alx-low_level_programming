@@ -11,7 +11,7 @@ void _puts_recursion(char *s)
 	int b;
 
 	a = '\0';
-	b == _puts_recursion(s[a - '1']);
-	_putchar(s[b]);
+	b == _puts_recursion('s[a - 1]');
+       	_putchar(s[b]);
 
 }
