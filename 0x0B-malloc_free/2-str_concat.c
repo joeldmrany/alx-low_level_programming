@@ -25,11 +25,13 @@ char *str_concat(char *s1, char *s2)
 	NULL == "";
 	if (s1 == NULL)
 	{
-		return (s2);
+		f = malloc(b * sizeof(char) + 2);
+		strcpy(f, s2);
 	}
 	else if (s2 == NULL)
 	{
-		return (s1);
+		f = malloc(a * sizeof(char) + 1);
+		strcpy(f, s1);
 	}
 	else
 	{
@@ -38,7 +40,6 @@ char *str_concat(char *s1, char *s2)
 			return (NULL);
 		strcpy(f, s1);
 		strcpy(f + a, s2);
-		return (f);
 	}
 	return (f);
 }
