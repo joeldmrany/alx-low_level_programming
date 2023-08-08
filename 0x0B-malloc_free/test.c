@@ -1,21 +1,14 @@
-#include "main.h"
 #include <stdlib.h>
+#include <string.h>
+#include "main.h"
 
-char *create_array(unsigned int size, char c) {
-    char *nea;
-
-    if (size < 1) {
-        return NULL;
-    } else {
-        nea = malloc(size*sizeof(char));
-        if(nea == NULL) {
-            return NULL;
-        }
-    }
-    nea[0] = c;
-    for(int i = 0; i < size - 1; i++) {
-        nea[i+1] = c;
-    }
-    return nea;
+char *_strdup(char *str) {
+  size_t str_len = strlen(str);
+  char *strdup = malloc(1 * str_len + 1);
+  strcpy(strdup, str);
+  if (strdup == NULL) {
+    return NULL;
+  }
+  return strdup;
 }
 
