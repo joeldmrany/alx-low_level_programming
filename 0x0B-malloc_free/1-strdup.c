@@ -1,7 +1,11 @@
 #include "main.h"
 #include <string.h>
 #include <stdlib.h>
-
+/**
+ * _strdup - duplicate string
+ * @str: pointer char
+ * Return: c
+ */
 
 char *_strdup(char *str)
 {
