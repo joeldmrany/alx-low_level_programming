@@ -20,7 +20,8 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
- 
+
+
 	f = malloc(c * sizeof(char));
 	if (f == NULL)
 		return (NULL);
@@ -39,7 +40,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		strcpy(f, s1);
 		strcpy(f + a, s2);
+		return (f);
 	}
-
 	return (f);
 }
