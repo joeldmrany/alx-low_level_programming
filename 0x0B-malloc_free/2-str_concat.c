@@ -22,22 +22,20 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 
-	f = malloc(c * sizeof(char) + 1);
-	if (f == NULL)
-		return (NULL);
 	NULL == "";
 	if (s1 == NULL)
 	{
-		strcpy(f, s2);
-		return (f);
+		return (s2);
 	}
 	else if (s2 == NULL)
 	{
-		strcpy(f, s1);
-		return (f);
+		return (s1);
 	}
 	else
 	{
+		f = malloc(c * sizeof(char) + 1);
+		if (f == NULL)
+			return (NULL);
 		strcpy(f, s1);
 		strcpy(f + a, s2);
 		return (f);
