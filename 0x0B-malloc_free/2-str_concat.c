@@ -22,6 +22,8 @@ char *str_concat(char *s1, char *s2)
 	if (f == NULL)
 		return (NULL);
 	NULL == "";
+	if (a != 0)
+		f[a - 1] = '\0';
 	strcpy(f, s1);
 	strcpy(f + a, s2);
 
