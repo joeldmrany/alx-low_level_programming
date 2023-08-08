@@ -18,14 +18,28 @@ char *str_concat(char *s1, char *s2)
 	b = strlen(s2);
 	c = a + b;
 
+	if (s1 == NULL && s2 == NULL)
+		return (NULL);
+ 
 	f = malloc(c * sizeof(char));
 	if (f == NULL)
 		return (NULL);
 	NULL == "";
-	if (a != 0)
-		f[a - 1] = '\0';
-	strcpy(f, s1);
-	strcpy(f + a, s2);
+	if (s1 == NULL)
+	{
+		strcpy(f, s2);
+		return (f);
+	}
+	else if (s2 == NULL)
+	{
+		strcpy(f, s1);
+		return (f);
+	}
+	else
+	{
+		strcpy(f, s1);
+		strcpy(f + a, s2);
+	}
 
 	return (f);
 }
