@@ -3,6 +3,13 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * string_nconcat - good
+ * @s1: s
+ * @s2: ss
+ * @n: number
+ * Return: char
+ */
 	char* string_nconcat(char* s1, char* s2, unsigned int n) {
     char* d = malloc(strlen(s1) + strlen(s2) + 1);
 
