@@ -24,7 +24,7 @@ char *_strcpy(char *destination, char *source)
 	int b;
 
 	for (b = 0; source[b]; b++)
-		destination[b] = source [b];
+		destination[b] = source[b];
 	destination[b] = '\0';
 	return (destination);
 }
@@ -48,7 +48,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (dog->name == NULL)
 		return (NULL);
 	dog->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
-	if (dog-> owner == NULL)
+	if (dog->owner == NULL)
 		return (NULL);
 	dog->name = _strcpy(dog->name, name);
 	dog->owner = _strcpy(dog->owner, owner);
