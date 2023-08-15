@@ -22,6 +22,7 @@ int _strlen(const char *a)
 char *_strcpy(char *destination, char *source)
 {
 	int b;
+
 	for (b = 0; source[b]; b++)
 		destination[b] = source [b];
 	destination[b] = '\0';
@@ -37,6 +38,7 @@ char *_strcpy(char *destination, char *source)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
+
 	if (!name || age < 0 || !owner)
 		return (NULL);
 	dog = (dog_t *) malloc(sizeof(dog_t));
@@ -44,9 +46,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	dog->name = malloc(sizeof(char) * (_strlen(name) + 1));
 	if (dog->name == NULL)
-	{
 		return (NULL);
-	}
 	dog->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
 	if (dog-> owner == NULL)
 		return (NULL);
