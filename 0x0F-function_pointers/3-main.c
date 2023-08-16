@@ -7,7 +7,7 @@
  */
 int main(int argc, char **argv)
 {
-	int(*op_func)(int, int), a, b;
+	int (*op_func)(int, int), a, b;
 
 	if (argc != 4)
 		printf("Error\n");
