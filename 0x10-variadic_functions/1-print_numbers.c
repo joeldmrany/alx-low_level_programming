@@ -5,6 +5,7 @@
  * print_numbers - it prints the numbers with separator
  * @separator: it is the separator
  * @n: the number of integers
+ * Return: void
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
