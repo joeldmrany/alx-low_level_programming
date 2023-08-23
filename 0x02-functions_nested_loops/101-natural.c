@@ -13,23 +13,18 @@ void print_sum_of_them(void)
 		if ((a % 3) == 0)
 		{
 			sum += a;
-			if ((a % 5) == 0)
-			{
-				sum += a;
-			}
 		}
 		else if ((a % 5) == 0)
 		{
 			sum += a;
-			if ((a % 3) == 0)
-			{
-				sum += a;
-			}
 		}
 	}
 	printf("%d\n", sum);
 }
-
+/**
+ * main - the main function
+ * Return: 0
+ */
 int main(void)
 {
 	print_sum_of_them();
