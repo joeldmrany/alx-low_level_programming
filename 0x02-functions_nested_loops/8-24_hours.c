@@ -1,31 +1,23 @@
 #include "main.h"
+
 /**
  * jack_bauer - no
  * Return: 0
  */
 void jack_bauer(void)
 {
-	int a, b, c, d;
+	int hours, minutes;
 
-	for (a = 0; a <= 2; a++)
+	for (hours = 0; hours <= 23; hours++)
 	{
-		for (b = 0; b <= 3; b++)
+		for (minutes = 0; minutes <= 59; minutes++)
 		{
-			for (c = 0; c <= 5; c++)
-			{
-				for (d = 0; d <= 9; d++)
-				{
-					if (a <= 2 && b <= 3)
-					{
-						_putchar(a);
-						_putchar(b);
-						_putchar(':');
-						_putchar(c);
-						_putchar(d);
-						_putchar('\n');
-					}
-				}
-			}
+			_putchar((hours / 10) + 48);
+			_putchar((hours % 10) + 48);
+			_putchar(':');
+			_putchar((minutes / 10) + 48);
+			_putchar((minutes % 10) + 48);
+			_putchar('\n');
 		}
 	}
 }
