@@ -1,8 +1,6 @@
 #include "main.h"
-
 /**
  * times_table - print time table of number 9
- * Return: void
  */
 void times_table(void)
 {
