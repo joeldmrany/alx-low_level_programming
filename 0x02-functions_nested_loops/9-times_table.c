@@ -15,7 +15,7 @@ void times_table(void)
 			d = (b * c);
 			if (d <= 9)
 			{
-				if (d == 0)
+				if (d == 0 && (b != 0))
 				{
 					_putchar('0');
 				}
