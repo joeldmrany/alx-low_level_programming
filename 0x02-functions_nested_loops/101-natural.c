@@ -6,7 +6,7 @@ void print_sum_of_them(void)
 {
 	int a, sum;
 
-	for (a = 0; a <= 1024; a++)
+	for (a = 0; a < 1024; a++)
 	{
 		if ((a % 3) == 0)
 		{
