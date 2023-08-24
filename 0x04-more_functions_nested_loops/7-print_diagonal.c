@@ -9,20 +9,21 @@ void print_diagonal(int n)
 
 	if (n > 0)
 	{
-		for (a = 0; a < n; a++)
+		for (a = 0; a <= n; a++)
 		{
-			if (a != (n - 1))
-				_putchar(92);
-			if (a != (n))
+			if (a != n)
 			{
-				_putchar('\n');
-				for (b = a; b > 0; b--)
+				for (b = (a); b > 0; b--)
 				{
 					_putchar(' ');
 				}
+				_putchar(92);
+				_putchar('\n');
 			}
 		}
 	}
 	else if (n <= 0)
+	{
 		_putchar('\n');
+	}
 }
