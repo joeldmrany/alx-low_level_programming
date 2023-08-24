@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main - main function to print numbers form 1 to 100 if the number muliples by 3 printes Fizz
- * if number multiples by 5 prints Buzz if it multiply by two of them prints FizzBuzz
+ * main - main function to print numbers form 1 to 100
+ * if the number muliples by 3 printes Fizz
+ * if number multiples by 5 prints Buzz i
+ * f it multiply by two of them prints FizzBuzz
  * Return: 0
  */
 void fizz_buzz(void);
