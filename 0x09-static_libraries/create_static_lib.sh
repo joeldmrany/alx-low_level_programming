@@ -1,3 +1,3 @@
 #!/bin/bash
-ar rcs liball.a *.c
+ar rs liball.a *.c
 
