@@ -4,48 +4,32 @@
  * main - the main function
  * @argc: the number of arguments
  * @argv: the arguments
- * Return: 0 or 1
+ * Return: 1 of 0
  */
 int main(int argc, char **argv)
 {
-	int a, b;
+	int a, b, i;
+	int coins[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	a = atoi(argv[1]);
 
+	a = atoi(argv[1]);
 	if (a < 0)
 		printf("0\n");
 	else
 	{
 		b = 0;
-		while (a >= 25)
+		for (i = 0; i < 5; i++)
 		{
-			a -= 25;
-			b++;
-		}
-		while (a >= 10)
-		{
-			a -= 10;
-			b++;
-		}
-		while (a >= 5)
-		{
-			a -= 5;
-			b++;
-		}
-		while (a >= 2)
-		{
-			a -= 2;
-			b++;
-		}
-		while (a >= 1)
-		{
-			a -= 1;
-			b++;
+			while (a >= coins[i])
+			{
+				a -= coins[i];
+				b++;
+			}
 		}
 		printf("%d\n", b);
 	}
