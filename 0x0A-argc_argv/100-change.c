@@ -15,7 +15,6 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		return (1);
 	}
-
 	a = atoi(argv[1]);
 
 	if (a < 0)
@@ -23,7 +22,6 @@ int main(int argc, char **argv)
 	else
 	{
 		b = 0;
-
 		while (a >= 25)
 		{
 			a -= 25;
