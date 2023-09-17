@@ -12,6 +12,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list argu;
 
 	va_start(argu, n);
+	if (n == 0)
+		printf("\n");
 	for (a = 0; a < n; a++)
 	{
 		num = va_arg(argu, int);
