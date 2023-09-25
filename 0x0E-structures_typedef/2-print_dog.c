@@ -26,7 +26,7 @@ void print_dog(struct dog *d)
 		}
 		if (d->owner == NULL)
 		{
-			printf("Owner: (nil)");
+			printf("Owner: (nil)\n");
 		}
 		else
 		{
@@ -34,7 +34,7 @@ void print_dog(struct dog *d)
 		}
 		if (d == NULL)
 		{
-			printf("(nil)");
+			printf("(nil)\n");
 		}
 	}
 }
