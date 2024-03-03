@@ -4,7 +4,7 @@
 /**
  * main - the main function
  * n: the number that will be checked
- * return: (0)
+ * Return: (0)
  */
 int main(void)
 {
