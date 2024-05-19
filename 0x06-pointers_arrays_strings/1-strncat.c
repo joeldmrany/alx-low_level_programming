@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * _strncat: function near to strcat
+ * _strncat - function near to strcat and that is all you need
  * @dest: destination
  * @src: source
  * @n: number of bits
