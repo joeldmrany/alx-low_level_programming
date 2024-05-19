@@ -17,5 +17,5 @@ char *_strcat(char *dest, char *src)
 	d[c] = '\0';
 	dest = malloc(c * sizeof(char) + 1);
 	strcpy(dest, d);
-	return (d);
+	return (dest);
 }
