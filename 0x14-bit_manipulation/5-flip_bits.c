@@ -8,17 +8,17 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int b.diff, sk;
+	unsigned long int b_diff, sk;
 	int i, digit;
 	unsigned int diff;
 
 	diff = 0;
 	sk = 0;
-	b.diff = n ^ m;
+	b_diff = n ^ m;
 	for (i = 63; i >= 0; i--)
 	{
 		sk = 1 << i;
-		digit = (b.diff & sk) >> i;
+		digit = (b_diff & sk) >> i;
 		if (digit == 1)
 			diff++;
 	}
