@@ -8,9 +8,11 @@
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int i, test, num = 0;
+	int i, test, num;
 
-	if (array != NULL && cmp != NULL)
+	if (size <= 0)
+		return (-1);
+	else if (array != NULL && cmp != NULL)
 	{
 		for (i = 0; i < size; i++)
 		{
@@ -21,10 +23,11 @@ int int_index(int *array, int size, int (*cmp)(int))
 				break;
 			}
 		}
-		return (num);
+		if (num == 0)
+			return (-1);
+		else
+			return (num);
 	}
-	else if (num == 0 || size <= 0)
-		return (-1);
 	else
 		return (-1);
 }
