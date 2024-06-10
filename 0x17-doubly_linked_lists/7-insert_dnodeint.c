@@ -11,7 +11,6 @@ size_t dlistint_len(const dlistint_t *h)
 	size_t count;
 
 	count = 0;
-
 	while (h)
 	{
 		count++;
@@ -19,7 +18,6 @@ size_t dlistint_len(const dlistint_t *h)
 	}
 	return (count);
 }
-
 /**
  * insert_dnodeint_at_index - function that inserts a new node
  *				at given position
@@ -38,21 +36,16 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (new_node == NULL)
 		return (NULL);
 	new_node->n = n;
-	if (*h == NULL)
+	if (*h == NULL && idx == 0)
 	{
-		if (idx == 0)
-		{
-			new_node->next = NULL;
-			new_node->prev = NULL;
-			*h = new_node;
-			return (new_node);
-		}
-		free(new_node);
-		return (NULL);
+		new_node->next = NULL;
+		new_node->prev = NULL;
+		*h = new_node;
+		return (new_node);
 	}
 	count = dlistint_len(*h);
 	t = *h;
-	if (idx > count || t == NULL)
+	if (idx > count || t == NULL || ((*h == NULL) && (idx != 0)))
 	{
 		free(new_node);
 		return (NULL);
@@ -67,9 +60,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (new_node);
 	}
 	for (i = 0; i < idx - 1 && t != NULL; i++)
-	{
 		t = t->next;
-	}
 	new_node->next = t->next;
 	if (t->next != NULL)
 		t->next->prev = new_node;
