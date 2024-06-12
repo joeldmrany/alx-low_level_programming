@@ -30,11 +30,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	unsigned int i;
 	dlistint_t *new_node, *temp;
 
-	new_node = malloc(sizeof(dlistint_t));
-	if (new_node == NULL)
-	{
-		return (-1);
-	}
 	count = counter(*head);
 	if (index >= count || *head == NULL)
 	{
@@ -47,6 +42,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		*head = new_node->next;
 		if (*head)
 			(*head)->prev = NULL;
+		free(new_node);
 		return (1);
 	}
 	for (i = 0; i < index ; i++)
