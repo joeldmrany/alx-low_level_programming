@@ -2,7 +2,7 @@
 
 void fibonacci()
 {
-    int i, k, num;
+    int i, k;
     long int fib[50];
     fib[0] = 1;
     fib[1] = 2;
